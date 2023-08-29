@@ -86,7 +86,9 @@ class AppRoutingModule {
     type: AppRoutingModule
   });
   static ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjector"]({
-    imports: [_angular_router__WEBPACK_IMPORTED_MODULE_6__.RouterModule.forRoot(routes, {}), _angular_router__WEBPACK_IMPORTED_MODULE_6__.RouterModule]
+    imports: [_angular_router__WEBPACK_IMPORTED_MODULE_6__.RouterModule.forRoot(routes, {
+      useHash: true
+    }), _angular_router__WEBPACK_IMPORTED_MODULE_6__.RouterModule]
   });
 }
 (function () {
