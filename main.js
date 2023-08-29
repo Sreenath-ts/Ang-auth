@@ -713,7 +713,7 @@ function ErrorComponent_ng_container_1_Template(rf, ctx) {
 class ErrorComponent {
   auth;
   router;
-  error$ = this.auth.error$;
+  error$ = this.auth?.error$;
   constructor(auth, router) {
     this.auth = auth;
     this.router = router;
