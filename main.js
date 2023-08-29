@@ -719,9 +719,11 @@ class ErrorComponent {
     this.router = router;
   }
   ngOnInit() {
-    (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.timer)(0).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.takeUntil)(this.error$)).subscribe(() => {
-      this.router.navigateByUrl('/');
-    });
+    if (this.error$) {
+      (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.timer)(0).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.takeUntil)(this.error$)).subscribe(() => {
+        this.router.navigateByUrl('/');
+      });
+    }
   }
   static ɵfac = function ErrorComponent_Factory(t) {
     return new (t || ErrorComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_auth0_auth0_angular__WEBPACK_IMPORTED_MODULE_3__.AuthService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__.Router));
